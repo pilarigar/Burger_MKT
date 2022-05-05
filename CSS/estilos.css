@@ -3,25 +3,3 @@
     margin: 0;
     box-sizing: border-box;
 }
-
-
-/*footer*/
-
-footer{
-    background-color: black;
-    height: 100px; 
-    display: flex;
-}
-
-.footer{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.boton{
-    display: flex;
-    flex-direction: row;
-    align-items: flex-end;
-}
-
