@@ -9,18 +9,19 @@
 
 footer{
     background-color: black;
-    height: 100px; ;
-    width: auto;
+    height: 100px; 
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    
 }
 
 .footer{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+}
+
+.boton{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
 }
 
