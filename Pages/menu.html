@@ -1,103 +1,165 @@
 <!DOCTYPE html>
+
 <html lang="es">
+    
 <head>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Burger Market Co.</title>
-    <link rel="stylesheet" href="/CSS/estilos.css">
-
+    
+    <title>Burguer Market Co.</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- estilos -->
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;700&display=swap" rel="stylesheet">
+        
     <script src="https://kit.fontawesome.com/e0d0b4a478.js" crossorigin="anonymous"></script>
+        
+    <!-- CSS -->
+    <link rel="stylesheet" href="CSS/estilos.css">
+    
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>  
+    
 </head>
 
-<body class="background">
 
-    <header>
-        <span class="marca">
-            <img src="/Imagenes/Logo.JPG" class="logo" alt="logo"> 
-            <span class="titulo">Burger Market Co.</span> 
-        </span>
 
-       <span>
-           <a class=header_open href="#sidebar"> <i class="header_icono fas fa-bars"></i> </a>  
-            <nav class="nav" id="sidebar">
-                <ul>
+<body style="background-color: black;">
 
-                  <li> <a href="../index.html">Inicio</a></li>
-                  <li> <a href="./nosotros.html">Nosotros</a></li>
-                  <li> <a href="./menu.html">Menú</a></li>
-                  <li> <a href="./sucursales.html">Surcursales</a></li>
-                  <li> <a href="./contactanos.html">Contactanos</a></li>
-                  <li> <a class="nav_enlace" href="#">❌</a>  </li>
-                </ul>
-           </nav>
-
-       </span> 
-
-    </header>
-
-    <hr>
-
-    <div class="menu-online">
-        <h2>Menú</h2>
-    </div>
-   
-    <div id="main-conteiner">
-      
-       <table>
-        <tr>
-            <td>Hamburguesa simple</td>
-            <td>$600</td>
-        </tr>
-        <tr>
-            <td>Hamburguesa doble</td>
-            <td>$700</td>
-        </tr>
-        <tr>
-            <td>Hamburguesa triple</td>
-            <td>$800</td>
-        </tr>
-        <tr>
-            <td>Hamburguesa cuádruple</td>
-            <td>$900</td>
-        </tr>
-        <tr>
-            <td>Hamburguesa simple</td>
-            <td>$600</td>
-        </tr>
-        <tr>
-            <td>Papas fritas</td>
-            <td>$500</td>
-        </tr>
-        <tr>
-            <td>Agua</td>
-            <td>$300</td>
-        </tr>
-        <tr>
-            <td>Gaseosa</td>
-            <td>$350</td>
-        </tr>
-      </table>
-   </div> 
-
+    <header> 
     
- 
-    <br>
+        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: black;">
+            
+            <div class="container-fluid" style="background-color: black;">
+              <a class="navbar-brand" href="#" style="font-size: xx-large; font-weight: bolder;"> <img src="../Imagenes/Logo.JPG" class="logo" height="50px" alt="logo"> Burger Market</a>
+              
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbar"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+    
+              <div class="collapse navbar-collapse" id="navbar">
+    
+                <ul class="navbar-nav ms-auto">
+    
+                  <li class="nav-item">
+                     <a class="nav-link" href="../index.html">Inicio</a>
+                  </li>
+                  <li> 
+                     <a class="nav-link" href="./nosotros.html">Nosotros</a>
+                  </li>
+                  <li> <a class="nav-link" href="./menu.html">Menú</a>
+                  </li>
+                  <li> <a class="nav-link" href="sucursales.html">Surcursales</a>
+                  </li>
+                  <li> <a class="nav-link" href="contactanos.html">Contactanos</a>
+                  </li>
+                  
+                </ul>
+    
+            </div>
+    
+        </nav>
+    
+    </header>
+    
+    
+    
+    <main style="background-image: url(../Imagenes/2.jpg); height: 500px;"> 
+
+        <h2 style="color: aliceblue; font-size: xx-large; font-weight: bolder; text-align: center;justify-content: center;">Menú</h2>
+
+        <div style="justify-content: center; align-items: center;">
+
+            <table class="table table-borderless" style="width:max-content; color: aliceblue; background-color: rgba(128, 128, 128, 0.596);margin:auto; font-size: x-large;"> 
+                
+                <thead>
+                    
+                    <tr>
+                      <th scope="col-6">HAMBURGUESA</th>
+                      <th scope="col-6">PRECIO</th>
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                      <td>Hamburguesa simple</td>
+                      <td>$600</td>
+                    </tr>
+
+                    <tr>
+                      <td>Hamburguesa doble</td>
+                      <td>$700</td>
+                    </tr>
+
+                    <tr>
+                      <td>Hamburguesa triple</td>
+                      <td>$800</td>
+                    </tr>
+
+                    <tr>
+                      <td>Hamburguesa cuádruple</td>
+                      <td>$900</td>
+                    </tr>
+                      
+                    <tr>
+                      <td>Papas fritas</td>
+                      <td>$500</td>
+                    </tr>
+
+                    <tr>
+                      <td>Agua</td>
+                      <td>$300</td>
+                    </tr>
+
+                    <tr>
+                        <td>Gaseosa</td>
+                        <td>$350</td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+        </div> 
+
+    </main>
+      
     <hr>
 
     <footer>
-        <div class="footer">
-           <span>Todos los derechos reservados a Burguer Market Company S.A.® </span>
-           <span> <ion-icon name="logo-whatsapp"></ion-icon> +113049302 </span>
-           <span> <ion-icon name="pin"></ion-icon>  Av. Santa Fe 2669, CABA.</span>
-        </div>
- 
-        <span class="boton">
-           <button><ion-icon name="logo-instagram" size="large"></ion-icon></button>
-           <button><ion-icon name="logo-facebook" size="large"></ion-icon></button> 
-         </span>
-     </footer>
-
+      
+        <div class="container" style="justify-content: space-around; margin: auto;">
+  
+          <div class="row" style="color: aliceblue; background-color: black;">
+              
+            <span class="col-3">Todos los derechos reservados a Burguer Market Company S.A.® </span>
+              
+            <span class="col-3"> <ion-icon name="logo-whatsapp"></ion-icon> +113049302 </span>
+              
+            <span class="col-3"> <ion-icon name="pin"></ion-icon>  Av. Santa Fe 2669, CABA.</span>
+              
+            <span class="col-3">
+              <button><ion-icon name="logo-instagram" size="large"></ion-icon></button>
+              <button ><ion-icon name="logo-facebook" size="large"></ion-icon></button> 
+            </span>
+              
+          </div> 
+        </div>  
+        
+    </footer>
+  
 </body>
+
 <script name="ion-icon" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 </html>

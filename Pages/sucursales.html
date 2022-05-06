@@ -1,82 +1,121 @@
 <!DOCTYPE html>
 <html lang="es">
+    
 <head>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         
     <title>Burguer Market Co.</title>
-    <link rel="stylesheet" href="/CSS/estilos.css">
-
+         
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+         
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+         
+    <!-- estilos -->
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;700&display=swap" rel="stylesheet">
+             
     <script src="https://kit.fontawesome.com/e0d0b4a478.js" crossorigin="anonymous"></script>
+             
+    <!-- CSS -->
+    <link rel="stylesheet" href="CSS/estilos.css">
+         
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>  
+         
 </head>
 
-<body class="sucursal">
+<body style="background-color:black;">
 
-    <header>
-        <span class="marca">
-            <img src="/Imagenes/Logo.JPG" class="logo" alt="logo"> 
-            <span class="titulo">Burger Market Co.</span> 
-        </span>
-        
-        <span>
+    <header> 
 
-            <a class=header_open href="#sidebar"> <i class="header_icono fas fa-bars"></i> </a>  
-            <nav class="nav" id="sidebar">
-                <ul>
-                   <li> <a href="../index.html">Inicio</a></li>
-                   <li> <a href="./nosotros.html">Nosotros</a></li>
-                   <li> <a href="./menu.html">Menú</a></li>
-                   <li> <a href="./sucursales.html">Surcursales</a></li>
-                   <li> <a href="./contactanos.html">Contactanos</a></li>
-                   <li> <a class="nav_enlace" href="#">❌</a>  </li>
-               </ul>
-            </nav>
+        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: black;">
 
-        </span>
-        
-
-    </header>
+          <div class="container-fluid" style="background-color: black;">
+            <a class="navbar-brand" href="#" style="font-size: xx-large; font-weight: bolder;"> <img src="../Imagenes/Logo.JPG" class="logo" height="50px" alt="logo"> Burger Market</a>
+            
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbar"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+  
+            <div class="collapse navbar-collapse" id="navbar">
+  
+              <ul class="navbar-nav ms-auto">
+  
+                <li class="nav-item">
+                   <a class="nav-link" href="../index.html">Inicio</a>
+                </li>
+                <li> 
+                   <a class="nav-link" href="./nosotros.html">Nosotros</a>
+                </li>
+                <li> <a class="nav-link" href="./menu.html">Menú</a>
+                </li>
+                <li> <a class="nav-link" href="./sucursales.html">Surcursales</a>
+                </li>
+                <li> <a class="nav-link" href="./contactanos.html">Contactanos</a>
+                </li>
+                
+              </ul>
+  
+            </div>
+  
+        </nav>
+  
+      </header>
 
     <hr>
 
-    <main class="primera">
+    <main class="container" style="background-image: url(../Imagenes/8.jpg); background-repeat:repeat-y; background-position-x: right; background-size: auto;">
 
-       <div class="sucursales">
-          <h2>Sucursal La Plata</h2>
-          <h3>Cantilo 786, City Bell</h3>
-          <h4>Tel:221456951</h4>
+       <div class="col-9" style="color: aliceblue; margin: auto; font-size: x-large;">
+        
+          <h2 style="text-align: justify;">Sucursal La Plata</h2>
+          <h3 style="text-align: justify;">Cantilo 786, City Bell</h3>
+          <h4 style="text-align: justify;">Tel:221456951</h4>
 
           <span><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3273.3260349777483!2d-58.04939238559914!3d-34.873158380390514!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a2de7c013b0523%3A0x8e2610bb125e20e9!2sC.%20Cantilo%20786%2C%20B1896%20City%20Bell%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1649360803465!5m2!1ses-419!2sar" class="ubicacion" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></span>
        </div>
 
-       <div class="sucursales">
-           <h2>Sucursal Palermo</h2>
-           <h3>Bulnes 2700</h3>
-           <h4>Tel:011963265</h4>
+       <div class="col-9" style="color: aliceblue; margin: auto; font-size: x-large;">
+           <h2 style="text-align: justify;">Sucursal Palermo</h2>
+           <h3 style="text-align: justify;">Bulnes 2700</h3>
+           <h4 style="text-align: justify;">Tel:011963265</h4>
 
            <span><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.907373105544!2d-58.41070418340796!3d-34.58121022713117!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb57cceb753b7%3A0x502c0674ceeef7da!2sBulnes%202700%2C%20C1425DKV%20CABA!5e0!3m2!1ses-419!2sar!4v1649360903962!5m2!1ses-419!2sar" class="ubicacion" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></span>
        </div>
 
-       <div class="sucursales">
-           <h2>Sucursal Recoleta</h2>
-           <h3>Av. Callao 200</h3>
-           <h4>Tel:011885963</h4>
+       <div class="col-9" style="color: aliceblue; margin: auto; font-size: x-large;">
+           <h2 style="text-align: justify;">Sucursal Recoleta</h2>
+           <h3 style="text-align: justify;">Av. Callao 200</h3>
+           <h4 style="text-align: justify;">Tel:011885963</h4>
 
            <span><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.9012589928793!2d-58.39449248560899!3d-34.60665828045865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccac237b5aeb1%3A0xd9af9d9a98aa7c23!2sAv.%20Callao%20200%2C%20C1022AAP%20CABA!5e0!3m2!1ses-419!2sar!4v1649361100138!5m2!1ses-419!2sar" class="ubicacion" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></span>
        </div>
 
-       <div class="sucursales">
-            <h2>Sucursal Quilmes</h2>
-            <h3>Moreno 78</h3>
-            <h4>Tel:011875234</h4>
+       <div class="col-9" style="color: aliceblue; margin: auto; font-size: x-large;">
+           <div>
+               <h2 style="text-align: justify;">Sucursal Quilmes</h2>
+               <h3 style="text-align: justify;">Moreno 78</h3>
+               <h4 style="text-align: justify;">Tel:011875234</h4>
+           </div>   
 
             <span><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3279.6568103602567!2d-58.26654608560498!3d-34.713835080431075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a32e10bbea56e3%3A0xc3bedd81f2b87c7c!2sMoreno%2078%2C%20Quilmes%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1649361148017!5m2!1ses-419!2sar" class="ubicacion" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></span>
        </div>
 
-       <div class="sucursales">
-            <h2>Sucursal Avellaneda</h2>
-            <h3>Monseñor Piaggio 26</h3>
-            <h4>Tel:011847632</h4>
+       <div class="col-9" style="color: aliceblue; margin: auto; font-size: x-large;">
+            
+           <div>
+                <h2 style="text-align: justify;">Sucursal Avellaneda</h2>
+                <h3 style="text-align: justify;">Monseñor Piaggio 26</h3>
+                <h4 style="text-align: justify;">Tel:011847632</h4>
+            </div>
 
             <span><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3281.6448381800747!2d-58.365723385606856!3d-34.663671380444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a3334e4f280747%3A0x603e5f3c27994402!2sMonse%C3%B1or%20Piaggio%2026%2C%20B1870%20CKB%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1649361194289!5m2!1ses-419!2sar" class="ubicacion" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></span>
        </div>
@@ -85,19 +124,31 @@
 
    <hr> 
 
-   <footer>
-       <div class="footer">
-          <span>Todos los derechos reservados a Burguer Market Company S.A.® </span>
-          <span> <ion-icon name="logo-whatsapp"></ion-icon> +113049302 </span>
-          <span> <ion-icon name="pin"></ion-icon>  Av. Santa Fe 2669, CABA.</span>
-       </div>
+    <footer>
+      
+        <div class="container" style="justify-content: space-around; margin: auto;">
 
-       <span class="boton">
-          <button><ion-icon name="logo-instagram" size="large"></ion-icon></button>
-          <button><ion-icon name="logo-facebook" size="large"></ion-icon></button> 
-        </span>
-    </footer>
+            <div class="row" style="color: aliceblue; background-color: black;">
+          
+                <span class="col-lg-3">Todos los derechos reservados a Burguer Market Company S.A.® </span>
+          
+                <span class="col-lg-3"> <ion-icon name="logo-whatsapp"></ion-icon> +113049302 </span>
+          
+                <span class="col-lg-3"> <ion-icon name="pin"></ion-icon>  Av. Santa Fe 2669, CABA.</span>
+          
+                <span class="col-lg-3">
+                  <button><ion-icon name="logo-instagram" size="large"></ion-icon></button>
+                  <button ><ion-icon name="logo-facebook" size="large"></ion-icon></button> 
+                </span>
+          
+            </div> 
+
+        </div>  
     
+    </footer>
+
 </body>
+
 <script name="ion-icon" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+
 </html>
