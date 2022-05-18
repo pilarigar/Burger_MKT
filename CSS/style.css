@@ -105,3 +105,27 @@ div span h1 {
     transform: translatey(-100px); }
   to {
     transform: translateY 0px; } }
+
+.sucursales {
+  background-image: url(../Imagenes/8.png);
+  background-repeat: repeat-y;
+  background-position-x: right;
+  background-size: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+  .sucursales__1 {
+    color: aliceblue;
+    margin: auto;
+    font-size: x-large;
+    text-align: justify;
+    margin-right: 1000px; }
+
+@media (max-width: 600px) {
+  .sucursales {
+    background-size: 200px; } }
+
+@media (min-width: 601px) and (max-width: 900px) {
+  .sucursales {
+    background-size: 300px; } }

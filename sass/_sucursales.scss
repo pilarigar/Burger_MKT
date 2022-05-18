@@ -1,0 +1,36 @@
+@mixin sucursales ($justify-content){
+    color:$fontcolor ; 
+    margin: auto; 
+    font-size: x-large;
+    text-align: justify;
+}
+
+.sucursales{
+    background-image: url(../Imagenes/8.png);
+    background-repeat:repeat-y;
+    background-position-x: right;
+    background-size: 600px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &__1{
+        @include sucursales(center);
+        margin-right: 1000px;
+    }
+}
+
+@media (max-width:600px){
+
+    .sucursales{
+      background-size: 200px;
+    }
+}
+
+@media (min-width:601px) and (max-width:900px){
+
+    .sucursales{
+      background-size: 300px;
+    }
+}
