@@ -1,0 +1,77 @@
+// página nosotros
+
+//primera sección
+
+.nosotros {
+    animation-name: nosotros;
+    animation-duration: 4s;
+    animation-iteration-count:1;
+    animation-direction: alternate;
+    color: $fontcolor;
+    font-family:$font;
+    text-align: center;
+}    
+
+
+@keyframes nosotros{
+    from {
+        transform: translateX(100px)
+    }
+
+    to {
+        transform: translateY (0px);
+    }
+
+}
+
+//segunda sección
+
+.nosotros2{
+    animation-name: seccion_nosotros;
+    animation-duration: 5s;
+    animation-iteration-count:1;
+    animation-delay: 2s;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    
+    
+
+    &__imagen{
+        margin-left: 10px;
+        margin: auto;
+    }
+
+    &__texto{
+        margin-left: 10px;
+        margin-right: 10px;
+        color:$fontcolor;
+        font-family:$font;
+        text-align:justify;
+    }
+}
+
+@media (max-width:992px){
+    .nosotros2{
+        display: flex;
+        flex-direction: column;
+
+        &__imagen{
+            width: 500px;
+            margin-bottom: 10px;
+        }
+    }
+}
+
+
+@keyframes seccion_nosotros{
+   
+    from {
+        transform: translatey(-100px)
+    }
+
+    to {
+        transform: translateY (0px);
+    }
+}

@@ -1,0 +1,69 @@
+
+//index
+
+div span h1{
+    animation-name: titulo;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-direction:reverse;
+
+}
+
+@keyframes titulo {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.1); ;
+    }
+}
+
+.imagen{
+    animation-name: burger;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes burger{
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.1);
+    }
+}
+
+.seccion1{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 600px;
+
+    &__img{
+        @extend .nosotros2__imagen;
+        margin: 100%;
+    }
+
+    &__texto{
+        @extend .nosotros2__texto;
+    }
+}
+
+@media (max-width:992px){
+    .seccion1{
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+        justify-content: space-between;
+        height: auto;
+
+        &__img{
+            width:600px;
+            align-items: center;
+        }
+    }
+}
