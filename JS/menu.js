@@ -84,3 +84,22 @@ let ingreso = prompt(
   );
     if (bebida == "OK") alert("Gracias, que lo disfrutes");
   }
+  
+
+  
+
+const listaIngredientes = [];
+let   cantidad = 5;
+console.log(listaIngredientes);
+
+do{
+
+   let entrada = prompt ("crea tu hamburguesa perfecta, elige los ingredientes extra que deseas");
+   listaIngredientes.push (entrada);
+   console.log (listaIngredientes.length);
+
+}while(listaIngredientes.length != cantidad)
+const nuevaLista = listaIngredientes.concat (["Estos son los ingredientes extra que seleccionaste... ahora a dsfrutar! :)"]);
+
+alert(nuevaLista.join("\n")); 
+
