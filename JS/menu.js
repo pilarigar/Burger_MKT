@@ -1,3 +1,4 @@
+//desafío DOM
 const productos = [
   {
       "Id": 1,
@@ -139,7 +140,7 @@ const renderCard = () => {
 renderCard() 
 
 
-/* 
+/* Desafío funciones de orden superior
 
 let carrito = []
 
