@@ -1,105 +1,159 @@
-let ingreso = prompt(
-    "Ingresa una opción \n 1-Hamburguesa con queso simple \n 2- Hamburguesa con queso doble \n 3-Hamburguesa con queso cuádruple \n 4-Hamburguesa completa \n Ingresa OK para seguir con tu pedido"
-  );
-  if (ingreso == "OK") alert("Gracias, que lo disfrutes");
-  
-  while (ingreso != "OK") {
-    switch (ingreso) {
-      case "1":
-        alert("Has seleccionado la hamburguesa simple, en total serían $600");
-        break;
-      case "2":
-        alert("Has seleccionado la hamburguesa doble, en total serían $700");
-        break;
-      case "3":
-        alert("Has seleccionado la hamburguesa triple, en total serían $800");
-        break;
-      case "4":
-        alert("Has seleccionado la hamburguesa cuádruple, en total serían $900");
-        break;
-  
-      default:
-        alert("Opción no válida");
-        break;
-    }
-    ingreso = prompt(
-        "Ingresa una opción \n 1-Hamburguesa con queso simple \n 2- Hamburguesa con queso doble \n 3-Hamburguesa con queso cuádruple \n 4-Hamburguesa completa \n Ingresa OK para seguir con tu pedido"
-    );
-    if (ingreso == "OK") alert("Gracias, que lo disfrutes");
+const productos = [
+  {
+      "Id": 1,
+      "Nombre": "Classic burguer",
+      "Descripcion": "Doble medallón de 120g de carne vacuna, cheddar x4, lechuga, tomate, cebolla morada, pepinillos, salsa Thousand Island",
+      "Precio": 1150,
+      "Foto":"" ,
+      "Categoria": "Comida"
+  },
+
+  {
+      "Id": 2,
+      "Nombre": "Cheese burger",
+      "Descripcion": "Medallón de 120g de carne vacuna, cheddar x4",
+      "Precio": 1100,
+      "Foto": "",
+      "Categoria": "Comida"
+  },
+
+  {
+      "Id": 3,
+      "Nombre": "Crispy burger",
+      "Descripcion": "Doble medallón de 120g de carne vacuna, cheddar x4, bacon, cebolla crispy, alioli",
+      "Precio": 1200,
+      "Foto": "",
+      "Categoria": "Comida"
+      
+  },
+
+  {
+      "Id": 4,
+      "Nombre": "Mushroom burger",
+      "Descripcion": "Doble medallón de 120g de carne vacuna, queso emmental x4, hongos salteados, cebolla caramelizada, queso azul",
+      "Precio": 1200,
+      "Foto": "",
+      "Categoria": "Comida"
+  }, 
+      
+  {
+      "Id": 5,
+      "Nombre": "Mexican burguer",
+      "Descripcion": "Doble medallón de 120g de carne vacuna, cheddar x4, nachos, guacamole, salsa de cheddar",
+      "Precio": 1200,
+      "Foto": "",
+      "Categoria": "Comida"
+      
+  },
+
+  {
+      "Id": 6,
+      "Nombre": "Medallón extra",
+      "Descripcion": "Medallón de 120g de carne vacuna",
+      "Precio": 120,
+      "Foto": "",
+      "Categoria": "Comida"
+  },
+
+  {
+      "Id": 7,
+      "Nombre": "Vegan burger",
+      "Descripcion": "Medallón isnot, cheddar x4, cebolla caramelizada, hongos, mayonesa vegana",
+      "Precio": 1200,
+      "Foto": "",
+      "Categoria": "Comida"
+  },
+
+  {
+      "Id": 8,
+      "Nombre": "Papas chicas",
+      "Descripcion": "Porción de papas para uno",
+      "Precio": 500,
+      "Foto": "",
+      "Categoria": "Papasfritas"
+  },
+
+  {
+      "Id": 9,
+      "Nombre": "Papas grandes",
+      "Descripcion": "Porción de papas para compartir",
+      "Precio": 800,
+      "Foto": "",
+      "Categoria": "Papasfritas"
+  },
+
+  {
+      "Id": 10,
+      "Nombre": "Gaseosas",
+      "Descripcion": "línea coca-cola",
+      "Precio": 400,
+      "Foto": "",
+      "Categoria": "Bebidas"
+  },
+
+  {
+      "Id": 11,
+      "Nombre": "Agua mineral",
+      "Descripcion": "línea coca-cola",
+      "Precio": 350,
+      "Foto": "",
+      "Categoria": "Bebidas"
+  },
+
+  {
+      "Id": 12,
+      "Nombre": "Limonada",
+      "Descripcion": "Limonada casera, con menta, jengibre y azucar",
+      "Precio": 400,
+      "Foto": "",
+      "Categoria": "Bebidas"
   }
+]
 
-  let papas = prompt(
-    "Ingresa una opción \n 1-papas chicas \n 2- papas grandes \n Ingresa OK para seguir con tu pedido"
-  );
-  if (papas == "OK") alert("Gracias, que lo disfrutes");
-  
-  while (papas != "OK") {
-    switch (papas) {
-      case "1":
-        alert("Has seleccionado las papas chicas, en total serían $500");
-        break;
-      case "2":
-        alert("Has seleccionado las papas grandes, en total serían $750");
-        break;
+let carrito = []
 
-      default:
-        alert("Opción no válida");
-        break;
-    }
-    papas= prompt(
-       "Ingresa una opción \n 1-papas chicas \n 2- papas grandes \n Ingresa OK para seguir con tu pedido"
-  );
-    if (papas == "OK") alert("Gracias, que lo disfrutes");
+//Ejemplo con ciclo usando map y reduce
+const agregarProductoCarrito = (id) => {
+  let productoEncontrado = productos.find(producto => producto.Id === id)
+  let productoCarrito = carrito.find(producto => producto.Id === id)
+  if (productoCarrito === undefined) {
+      alert("el producto " + productoEncontrado.Nombre + " fue agregado a su carrito")
+      carrito.push({
+          Cantidad: 1,
+          ...productoEncontrado
+      })
+  } else {
+      const prodIndex = carrito.findIndex((prod => prod.Id === id))
+      carrito[prodIndex].Cantidad = carrito[prodIndex].Cantidad + 1
+      carrito[prodIndex].Precio = carrito[prodIndex].Precio + productoEncontrado.Precio
   }
+}
 
-  let bebida = prompt(
-    "Ingresa una opción \n 1-Agua \n 2- Coca-Cola \n 3- Sprite \n 4- Cerveza \n 5- Limonada \n Ingresa OK para finalizar con tu pedido"
-  );
-  if (bebida == "OK") alert("Gracias, que lo disfrutes");
-  
-  while (bebida != "OK") {
-    switch (bebida) {
-      case "1":
-        alert("Has seleccionado agua, en total serían $300");
-        break;
-      case "2":
-        alert("Has seleccionado Coca-cola, en total serían $450");
-        break;
-      case "3":
-        alert("Has seleccionado Sprite, en total serían $450");
-        break;
-      case "4":
-          alert("Has seleccionado cerveza, en total serían $600");
-          break;
-      case "5":
-        alert("Has seleccionado limonada, en total serían $400");
-        break;
 
-      default:
-        alert("Opción no válida");
-        break;
-    }
-    bebida = prompt(
-      "Ingresa una opción \n 1-Agua \n 2- Coca-Cola \n 3- Sprite \n 4- Cerveza \n 5- Limonada \n Ingresa OK para finalizar con tu pedido"
-  );
-    if (bebida == "OK") alert("Gracias, que lo disfrutes");
+let nombre = prompt("ingrese su nombre")
+
+const saludar = (nombre) => {
+  alert("Bienvenido: " + nombre)
+}
+saludar(nombre)
+
+while (nombre !== "salir") {
+  let idProducto = Number(prompt("Ingrese el numero producto que desea comprar:" + "\n" + productos.map((producto) => ` \n ${producto.Id} - ${producto.Nombre}`)))
+  agregarProductoCarrito(idProducto)
+  let opcion = prompt("si desea seguir comprando, introduzca: si" + "\n" + "para finalizar introduzca: salir")
+  if (opcion === "si") {
+      idProducto = Number(prompt("Ingrese el numero producto que desea comprar:" + "\n" + productos.map((producto) => ` \n ${producto.Id} - ${producto.Nombre}`)))
+      agregarProductoCarrito(idProducto)
+      opcion = prompt("si desea seguir comprando, introduzca: si" + "\n" + "para finalizar introduzca: salir")
   }
-  
-
-  
-
-const listaIngredientes = [];
-let   cantidad = 5;
-console.log(listaIngredientes);
-
-do{
-
-   let entrada = prompt ("crea tu hamburguesa perfecta, elige los ingredientes extra que deseas");
-   listaIngredientes.push (entrada);
-   console.log (listaIngredientes.length);
-
-}while(listaIngredientes.length != cantidad)
-const nuevaLista = listaIngredientes.concat (["Estos son los ingredientes extra que seleccionaste... ahora a dsfrutar! :)"]);
-
-alert(nuevaLista.join("\n")); 
-
+  if (opcion === "salir") {
+      alert("gracias por su compra. Su recibo es: " +
+          "Productos :" + "\n" +
+          "\n" + carrito.map((producto) => producto.Cantidad > 3
+              ? ` \n Cantidad: ${producto.Cantidad} - Nombre: ${producto.Nombre} - Precio:${(producto.Precio - producto.Precio * 0.3)}`
+              : ` \n Cantidad: ${producto.Cantidad} - Nombre: ${producto.Nombre} - Precio: ${producto.Precio}`)
+          + "\n" +
+          "Precio Total: " + carrito.reduce((acc, { Precio }) => acc + Precio, 0))
+      break
+  }
+} 
