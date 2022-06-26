@@ -127,17 +127,24 @@ const renderCard = () => {
                         <h5 id="tituloProducto">${producto.Nombre}</h5>
                         <p id="descripcionProducto">${producto.Descripcion}</p>
                         <p id="precioProducto">$${producto.Precio}</p>
-                        <button data-id="${producto.Id}" id="mybtn" name="btnComprar" class="btn btn-success">Comprar</button>
+                        <button id="btncompra" data-id="${producto.Id}"  name="btnComprar" class="btn btn-success">Comprar</button>
                     </div>
                 </div>
-            </div>
-            `
+            </div>`
         }
+        
     });
     document.getElementById('productos').innerHTML = productosPanelVista
-
 }
+
 renderCard() 
+
+
+let btnAgregar = document.getElementById('btncompra')
+        
+        btnAgregar.addEventListener('Comprar',()=>{
+            console.log ("agregado al carrito")
+        })
 
 
 /* Desafío funciones de orden superior
