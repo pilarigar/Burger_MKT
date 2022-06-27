@@ -112,7 +112,6 @@ const productos = [
 ]
 
 const productosLista = document.getElementById('productos')
-const productoscarrito = document.getElementById('carrito')
 
 const nuevoarray = productos.find(producto => producto.Id === 1)
 console.log(nuevoarray) 
@@ -142,8 +141,8 @@ renderCard()
 
 let btnAgregar = document.getElementById('btncompra')
         
-        btnAgregar.addEventListener('Comprar',()=>{
-            console.log ("agregado al carrito")
+        btnAgregar.addEventListener('click',()=>{
+            alert ("agregado al carrito")
         })
 
 
