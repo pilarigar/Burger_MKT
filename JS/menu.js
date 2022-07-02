@@ -1,4 +1,5 @@
 //desafío DOM
+
 const productos = [
   {
       "Id": 1,
@@ -138,12 +139,24 @@ const renderCard = () => {
 
 renderCard() 
 
-
+//Evento compra
 let btnAgregar = document.getElementById('btncompra')
         
-        btnAgregar.addEventListener('click',()=>{
-            alert ("agregado al carrito")
-        })
+btnAgregar.addEventListener('click',()=>{
+alert ("agregado al carrito")
+})
+
+//JSON
+
+const guardarLocal = (clave, valor) => {
+localStorage.setItem(clave, valor);
+};
+        
+guardarLocal("listaProductos", JSON.stringify(productos));
+        
+let lista = JSON.parse(localStorage.getItem("listaProductos"));
+console.log(lista);
+        
 
 
 /* Desafío funciones de orden superior
