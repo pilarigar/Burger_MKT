@@ -153,9 +153,11 @@ localStorage.setItem(clave, valor);
 };
         
 guardarLocal("listaProductos", JSON.stringify(productos));
+
+//Sugar Syntax
         
-let lista = JSON.parse(localStorage.getItem("listaProductos"));
-console.log(lista);
+let lista = JSON.parse(localStorage.getItem("listaProductos")) || []
+
         
 
 
@@ -179,7 +181,7 @@ const agregarProductoCarrito = (id) => {
       carrito[prodIndex].Precio = carrito[prodIndex].Precio + productoEncontrado.Precio
   }
 }
-
+ 
 
 let nombre = prompt("ingrese su nombre")
 
