@@ -143,7 +143,7 @@ renderCard()
 let btnAgregar = document.getElementById('btncompra')
         
 btnAgregar.addEventListener('click',()=>{
-alert ("agregado al carrito")
+    Swal.fire('agregado al carrito')
 })
 
 //JSON
