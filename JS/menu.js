@@ -141,15 +141,17 @@ renderCard() */
 /*const nuevoarray = productos.find(producto => producto.Id === 1)
 console.log(nuevoarray) */
 
-const listaPost = document.querySelector("#cards");
+//desafío JSON
 
-const url = "./JS/productos.json";
+const listaProductos = document.querySelector("#cards");
+
+const url ='./JS/productos.json';
 
 fetch(url)
   .then((response) => response.json())
   .then((cards) => {
     console.log(productos);
-    post.forEach((productos) => {
+    cards.forEach((productos) => {
       const lista = document.createElement("lista");
       const {Id, Nombre, Descripcion, Precio, Foto} = productos;
       lista.innerHTML += `<div class="col-12 mb-2 col-md-4 col-sm-4 ">
@@ -164,7 +166,7 @@ fetch(url)
         </div>
      </div>`;
 
-     listaPost.append(lista);
+     listaProductos.append(lista);
 
     });
   });
@@ -196,6 +198,8 @@ const pedirProductos = async ()=>{
 
     const productos = await respuesta.json()
 }*/
+
+
 
 /* Desafío funciones de orden superior
 
