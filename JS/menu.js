@@ -1,6 +1,6 @@
 //desafío DOM
 
-const productos = [
+/*const productos = [
   {
       "Id": 1,
       "Nombre": "Classic burguer",
@@ -114,8 +114,7 @@ const productos = [
 
 const productosLista = document.getElementById('productos')
 
-const nuevoarray = productos.find(producto => producto.Id === 1)
-console.log(nuevoarray) 
+
 const renderCard = () => {
     let productosPanelVista = ''
     productos.forEach(producto => {
@@ -127,7 +126,7 @@ const renderCard = () => {
                         <h5 id="tituloProducto">${producto.Nombre}</h5>
                         <p id="descripcionProducto">${producto.Descripcion}</p>
                         <p id="precioProducto">$${producto.Precio}</p>
-                        <button id="btncompra" data-id="${producto.Id}"  name="btnComprar" class="btn btn-success">Comprar</button>
+                        <button id="btncompra" data-id="${productos.Id}"  name="btnComprar" class="btn btn-success">Comprar</button>
                     </div>
                 </div>
             </div>`
@@ -137,9 +136,40 @@ const renderCard = () => {
     document.getElementById('productos').innerHTML = productosPanelVista
 }
 
-renderCard() 
+renderCard() */
 
-//Evento compra
+/*const nuevoarray = productos.find(producto => producto.Id === 1)
+console.log(nuevoarray) */
+
+const listaPost = document.querySelector("#cards");
+
+const url = "./JS/productos.json";
+
+fetch(url)
+  .then((response) => response.json())
+  .then((cards) => {
+    console.log(productos);
+    post.forEach((productos) => {
+      const lista = document.createElement("lista");
+      const {Id, Nombre, Descripcion, Precio, Foto} = productos;
+      lista.innerHTML += `<div class="col-12 mb-2 col-md-4 col-sm-4 ">
+      <div class="card">
+          <div class="card-body">
+          <img id="fotoProducto" src="${Foto}" widht=200px height=200px  >
+          <h5 id="tituloProducto">${Nombre}</h5>
+          <p id="descripcionProducto">${Descripcion}</p>
+          <p id="precioProducto">$${Precio}</p>
+          <button id="btncompra" data-id="${Id}"  name="btnComprar" class="btn btn-success">Comprar</button>
+          </div>
+        </div>
+     </div>`;
+
+     listaPost.append(lista);
+
+    });
+  });
+
+//Evento compra- sweetalert
 let btnAgregar = document.getElementById('btncompra')
         
 btnAgregar.addEventListener('click',()=>{
@@ -148,7 +178,7 @@ btnAgregar.addEventListener('click',()=>{
 
 //JSON
 
-const guardarLocal = (clave, valor) => {
+/*const guardarLocal = (clave, valor) => {
 localStorage.setItem(clave, valor);
 };
         
@@ -156,10 +186,16 @@ guardarLocal("listaProductos", JSON.stringify(productos));
 
 //Sugar Syntax
         
-let lista = JSON.parse(localStorage.getItem("listaProductos")) || []
+let lista = JSON.parse(localStorage.getItem("listaProductos")) || []¨/
 
         
+/*const url = "./js/productos.json";
 
+const pedirProductos = async ()=>{
+    const respuesta = await fetch(url)
+
+    const productos = await respuesta.json()
+}*/
 
 /* Desafío funciones de orden superior
 
