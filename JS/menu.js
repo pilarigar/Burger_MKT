@@ -143,6 +143,8 @@ console.log(nuevoarray) */
 
 //desafío JSON
 
+let productos = [];
+
 const listaProductos = document.querySelector("#cards");
 
 const url ='./JS/productos.json';
@@ -161,7 +163,7 @@ fetch(url)
           <h5 id="tituloProducto">${Nombre}</h5>
           <p id="descripcionProducto">${Descripcion}</p>
           <p id="precioProducto">$${Precio}</p>
-          <button id="btncompra" data-id="${Id}"  name="btnComprar" class="btn btn-success">Comprar</button>
+          <button id="btncompra" data-id="${Id}" name="btnComprar" class="btn btn-success">Comprar</button>
           </div>
         </div>
      </div>`;
