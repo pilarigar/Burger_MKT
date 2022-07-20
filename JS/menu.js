@@ -147,9 +147,7 @@ let productos = [];
 
 const listaProductos = document.querySelector("#cards");
 
-const url ='./JS/productos.json';
-
-fetch(url)
+fetch('../productos.json')
   .then((response) => response.json())
   .then((cards) => {
     console.log(productos);
@@ -163,7 +161,7 @@ fetch(url)
           <h5 id="tituloProducto">${Nombre}</h5>
           <p id="descripcionProducto">${Descripcion}</p>
           <p id="precioProducto">$${Precio}</p>
-          <button id="btncompra" data-id="${Id}" name="btnComprar" class="btn btn-success">Comprar</button>
+          <button id="btnCompra" data-id="${Id}" name="btnComprar" class="btn btn-success">Comprar</button>
           </div>
         </div>
      </div>`;
@@ -174,7 +172,7 @@ fetch(url)
   });
 
 //Evento compra- sweetalert
-let btnAgregar = document.getElementById('btncompra')
+let btnAgregar = document.getElementById("btnComprar")
         
 btnAgregar.addEventListener('click',()=>{
     Swal.fire('agregado al carrito')

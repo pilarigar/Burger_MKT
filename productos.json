@@ -1,6 +1,4 @@
-
-[
-    {
+[  {
         "Id":1,
         "Nombre":"Classic burguer",
         "Descripcion":"Doble medallón de 120g de carne vacuna, cheddar x4, lechuga, tomate, cebolla morada, pepinillos, salsa Thousand Island",
@@ -95,5 +93,4 @@
         "Precio":400,
         "Foto":"https://www.ifeelgood.com.ar/img/articulos/limonada_con_curcuma_imagen1.jpg",
         "Categoria":"Bebidas"
-    }
-]
+    } ]
