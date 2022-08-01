@@ -74,44 +74,90 @@
   <main style="background-color: black;"> 
 
     <br>
-    <div class="row" class="container my-5 text center">
-      <div>
-         <h2 style="font-family:'Koulen';">Arma tu combo perfecto y disfruta </h2>
-      </div> 
-      
-      <div id="cards" > </div>
-   </div>
+    <div class="container">
+      <h2 style="font-family:'Koulen';">Arma tu combo perfecto y disfruta </h2>
+      <hr>
+      <!--carrito -->
+      <div class="container">
+        <table class="table" style="color:white ;">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Item</th>
+              <th scope="col">Cantidad</th>
+              <th scope="col">Acción</th>
+              <th scope="col">Total</th>
+            </tr>
+          </thead>
+          <tbody id="items"></tbody>
+          <tfoot>
+            <tr id="footer-carrito"></tr>
+          </tfoot>
+        </table>
+
+        <hr>
+        <!--contenedor cards -->
+        <div class="row" id="cards"></div>
+      </div>
+
+
+      <div class="row" id="contenedor-productos"> </div>
+    </div>
+    
+    <!--cards -->
+    <template id="template-productos">
+          <div class="col-12 mb-2 col-md-4">
+            <div class="card">
+              <div class="card-body">
+                <img src="" alt=""  style="width: 300px; height: 270px; align-self: center;">
+                <h5 style="font-weight: bolder; font-family:'Koulen' ;"></h5>
+                <p></p>
+                <p>$<span>1000</span></p>
+                <button class="btn btn-dark">Agregar al carrito</button>
+              </div>
+            </div>
+          </div>
+    </template>
+
+    <!--total carrito -->
+    <template id="template-footer">
+      <th scope="row" colspan="2">Total productos</th>
+      <td>10</td>
+      <td>
+          <button class="btn-danger btn-sm" id="vaciar-carrito">
+              vaciar todo
+          </button>
+      </td>
+      <td class="font-weight-bold">$ <span>5000</span></td>
+  </template>
+
+  <!--conteo carrito -->
+  <template id="template-carrito">
+    <tr>
+      <th scope="row">id</th>
+      <td>Café</td>
+      <td>1</td>
+      <td>
+          <button class="btn btn-info btn-sm">
+              +
+          </button>
+          <button class="bt btn-danger btn-sm">
+              -
+          </button>
+      </td>
+      <td>$ <span>500</span></td>
+    </tr>
+  </template>
 
   </main>
-
-  <footer>
-      
-    <div class="container" style="justify-content: space-around;  margin: auto;">
-  
-      <div class="row" class style="color: aliceblue; background-color: black;" >
-              
-        <span class="col-lg-3">Todos los derechos reservados a Burguer Market Company S.A.® </span>
-              
-        <span class="col-lg-3"> <ion-icon name="logo-whatsapp"></ion-icon> +113049302 </span>
-              
-        <span class="col-lg-3"> <ion-icon name="pin"></ion-icon>  Av. Santa Fe 2669, CABA.</span>
-              
-        <span class="col-lg-3">
-          <button><ion-icon name="logo-instagram" size="large"></ion-icon></button>
-          <button ><ion-icon name="logo-facebook" size="large"></ion-icon></button> 
-        </span>
-              
-      </div> 
-  
-    </div>  
-        
-  </footer>
-
-  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+ 
   <script src="../JS/menu.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script> 
+  </script>
   
 </body>
 
 <script name="ion-icon" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 
 </html>
+
